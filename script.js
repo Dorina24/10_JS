@@ -95,4 +95,16 @@ console.log(obj1 === obj3); // cand comparam obj1 cu adresa lui va returna ADEVA
 const areEqual = obj1.a === obj2.a && obj2.b === obj3.b;
 console.log(`areEqual:`, areEqual);
 
+//stergere proprietate obiect
+delete person.age;
+console.log(`person:`, person);
+
+//Obiectul date
+const date = new Date();
+console.log(`Date:`, date);
+
+//accesare an, luna...
+console.log('an:', date.getFullYear());
+console.log('Luna:', date.getMonth());
+console.log('Day of the Month:', date.getDay);
 
