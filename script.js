@@ -38,3 +38,17 @@ console.log(`myProducts after shift: `, myProducts);
 const indexOfPantaloni = myProducts.indexOf('Pantaloni');
 console.log(`Elementul Pantaloni se afla in lista la indexul: ${indexOfPantaloni}`);
 
+// subset al unui array
+const subsetOfMyProducts = myProducts.slice(1,3);
+console.log(`Subset from 1 to 3 is `, subsetOfMyProducts);
+
+//myProducts.splice(2,1);         // varianta asta afiseaza lista fara elementul sters
+//console.log('After splice(2, 1): ', myProducts);
+
+myProducts.splice(2,1, 'Camasa');  // varianta asta scoate elementul de pe indexul 2 si il inlocuieste cu Camasa
+console.log('After splice(2, 1, "Camasa"): ', myProducts);
+
+// concatenare array -uri
+
+const concatenatedArrays = myProducts.concat(subsetOfMyProducts);
+console.log('after concat(subsetOfMyProducts): ', concatenatedArrays);
