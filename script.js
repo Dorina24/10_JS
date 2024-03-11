@@ -52,3 +52,47 @@ console.log('After splice(2, 1, "Camasa"): ', myProducts);
 
 const concatenatedArrays = myProducts.concat(subsetOfMyProducts);
 console.log('after concat(subsetOfMyProducts): ', concatenatedArrays);
+
+//OBIECTE __________________________________________________
+let person = {
+    name: "John",
+    surname: "Doe",
+    age: 32,
+    address: {
+        street: "Cetatii",
+        number: 21,
+        appartment: "b1",
+        block: "7b",
+        zipCode: "100203",
+        city: "Cluj-Napoca",
+        country: "Cluj",
+        country: "Romania"
+    },
+};
+console.log("person: ", person);
+console.log (`nume persoana: ${person.name}`);
+console.log (`cos postal ${person.address.zipCode}`);
+console.log(person.appartment);    //returneaza undefined pt ca nu am selectat si obiectul adress; trebuie: person.address.appartment
+
+//brackets notation
+console.log(`person surname: ${person["surname"]}`);   // alt mod prin care putem accesa obiectul SURNAME
+
+//modificare valori in obict
+person.name = "Ion";
+console.log(`Name is:`, person.name);
+
+//comparare obiecte
+
+const obj1 = {a:10, b:true};
+const obj2 = {a:10, b:true};
+console.log(obj1 === obj2);     // returneaza FALS pentru ca se considera ca au locuri diferite in memorie
+
+const obj3=obj1;   // trebuie sa cream o a treia variabila de tip const salvam adresa catre obj1
+console.log(obj1 === obj3); // cand comparam obj1 cu adresa lui va returna ADEVARAT
+
+
+//comparare dupa proprietati
+const areEqual = obj1.a === obj2.a && obj2.b === obj3.b;
+console.log(`areEqual:`, areEqual);
+
+
